@@ -62,7 +62,7 @@
         backup: yes
         owner: www-data
         group: www-data
-        mode: 0640
+        mode: '640'
 
     - name: Remove ownCloud default site
       file:
@@ -81,7 +81,7 @@
         dest: /etc/apache2/sites-available/owncloud.conf
         owner: root
         group: root
-        mode: 0644
+        mode: '644'
       notify: reload apache
 
     - name: Enable ownCloud site
